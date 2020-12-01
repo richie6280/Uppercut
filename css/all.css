@@ -1,0 +1,435 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* start */
+.wrap{
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	font-family: '微軟正黑體';
+}
+
+.header{
+	width: 100%;
+	padding-top: 30px;
+}
+
+.header .logo{
+	display: flex;
+    justify-content: center;
+}
+
+.header .logo img{
+	vertical-align: middle;
+}
+
+.header .menu{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 0;
+}
+
+.header li{
+	padding: 0 25px;
+}
+
+.header li a{
+	text-decoration: none;
+	color: black;
+	font-weight: 700;
+}
+
+.header li a:hover{
+	color: rgba(0,0,0,.6);
+}
+
+/* swiper */
+.swiper-container {
+	width: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+}
+
+
+
+.content{
+	width: 100%;
+	display: flex;
+	padding-top: 30px;
+}
+
+.content .side-menu{
+	width: 20%;
+	padding: 50px 0;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 0 50px #ccc;
+}
+  
+.side-menu form{
+	display: flex;
+	margin: 0 10px 50px;
+	color: #000;
+}
+  
+.side-menu form input,
+.side-menu form button{
+	padding: 5px 10px;
+	background-color: transparent;
+}
+  
+.side-menu form input{
+	border-right: none;
+	width: 230px;
+	border-radius: 50px 0 0 50px;
+	color: #000;
+}
+  
+.side-menu form button{
+	width: 50px;
+	border-radius: 0 50px 50px 0;
+	background: #000;
+	color: #fff;
+}
+  
+.side-menu form input:focus,
+.side-menu form button:focus{
+	outline: none;
+}
+  
+.content p{
+	font-size: 24px;
+	font-weight: 900;
+	padding-left: 15px;
+}
+
+
+/* 特別分類 */
+nav{
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+}
+
+nav a{
+	text-decoration: none;
+	color: #000;
+	padding: 20px;
+	position: relative;
+	font-weight: 900;
+}
+  
+nav a + a::before{
+	content: '';
+	position: absolute;
+	border-top: 1px solid rgba(0,0,0,.3);
+	left: 10px;
+	right: 10px;
+	top: 0;
+}
+  
+nav a .fab,
+nav a .fas{
+	margin-right: -1.1em;
+	transform: scale(0);
+	transition: .3s;
+}
+
+nav a:hover .fab,
+nav a:hover .fas{
+	margin-right: 0em;
+	transform: scale(1);
+}
+
+/* 新聞 */
+.content .news{
+	padding: 20px 10px;
+	margin-top: 20px;
+}
+
+
+.content .news li {
+	margin-top: 20px;
+	padding: 5px 0;
+}
+
+.content .news li:hover a{
+	color: rgba(0,0,0,.6);
+}
+
+.content .news a{
+	display: flex;
+	text-decoration: none;
+	color: #000;
+}
+
+.content .news img{
+	vertical-align: middle;
+	width: 58px;
+}
+
+.content .news .txt{
+	padding-left: 10px;
+	font-size: 12px;
+	line-height: 1.2em;
+}
+
+/* 社群 */
+.social-media{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.social-media p{
+	padding-right: 150px;
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+
+.social-media a{
+    position: relative;
+    display: inline-block;
+	padding: 15px 30px;
+	margin: 10px 0;
+	text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 4px;    
+    text-decoration: none;
+    overflow: hidden;
+	transition: .2s;
+	font-weight: 900;
+}
+
+.social-media a:hover{
+    color: #fff;
+    background: #000;
+    transition-delay: .5s;
+}
+
+.social-media a span{
+    position: absolute;
+    display: block;
+}
+
+.social-media a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#000);
+}
+
+.social-media a:hover span:nth-child(1){
+    left: 100%;
+    transition: .5s;
+}
+
+.social-media a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#000);
+}
+
+.social-media a:hover span:nth-child(3){
+    right: 100%;
+    transition: .5s;
+    transition-delay: .25s;
+}
+
+.social-media a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(0deg,transparent,#000);
+}
+
+.social-media a:hover span:nth-child(2){
+    top: 100%;
+    transition: .5s;
+    transition-delay: .125s;
+}
+
+.social-media a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#000);
+}
+
+.social-media a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: .5s;
+    transition-delay: .375s;
+}
+
+/* 內容 */
+.content .content-pic{
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-left: 35px;
+}
+
+.content .item{
+	margin: 20px;
+	overflow: hidden;
+	position: relative;
+}
+
+.content .item img{
+	transition: .5s;
+	width: 250px;
+	height: 350px;
+}
+
+.content .item:hover img{
+	transform: scale(1.2);
+}
+
+.content .item-hover{
+	position: absolute;
+	background-color: rgba(0,0,0,.5);
+	top: 0;
+	bottom: 0;
+	left: 0px;
+	right: 0;
+	opacity: 0;
+	transition: .3s;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: #fff;
+	padding: 0 50px;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.content .item:hover .item-hover{
+	opacity: 1;
+}
+
+.content .item-hover:after{
+	content: '';
+  	display: block;
+  	width: 0%;
+  	height: 3px;
+  	background-color: #fff;
+  	transition: width .5s .2s;
+	margin-top: 20px;
+}
+
+.item:hover .item-hover:after{
+	width: 100%;
+}
+
+/* footer */
+.footer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 50px 0;
+}
+
+.footer a{
+	text-decoration: none;
+	color: #000;
+	font-weight: 900;
+}
+
+.footer a:hover{
+	color: rgba(0,0,0,.6);
+}
+
+.footer .copyright{
+	margin-top: 20px;
+	font-size: 12px;
+}
+
+/* 回到頂端 */
+#back-to-top {
+    background: url(https://upload.cc/i1/2020/11/30/b6OTeo.png) right center no-repeat;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9999;
+    width: 50px;
+    height: 60px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+	opacity: 0;
+}
+
+#back-to-top.show{
+    opacity: 1;
+}
